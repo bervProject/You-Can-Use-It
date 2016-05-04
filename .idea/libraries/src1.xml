@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="src1" type="flex">
+    <CLASSES>
+      <root url="file://$USER_HOME$/starling-2.0.1/starling/bin" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$USER_HOME$/starling-2.0.1/starling/doc/html" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$USER_HOME$/starling-2.0.1/samples/demo/src" />
+      <root url="file://$USER_HOME$/starling-2.0.1/samples/demo_mobile/src" />
+      <root url="file://$USER_HOME$/starling-2.0.1/samples/demo_web/src" />
+      <root url="file://$USER_HOME$/starling-2.0.1/samples/scaffold_mobile/src" />
+      <root url="file://$USER_HOME$/starling-2.0.1/starling/src" />
+      <root url="file://$USER_HOME$/starling-2.0.1/tests/src" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/starling-2.0.1/starling/bin" recursive="false" />
+  </library>
+</component>

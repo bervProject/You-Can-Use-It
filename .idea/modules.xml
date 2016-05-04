@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/YouCanUseIt.iml" filepath="$PROJECT_DIR$/YouCanUseIt.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/rekrutmen-labpro.iml" filepath="$PROJECT_DIR$/.idea/rekrutmen-labpro.iml" />
+>>>>>>> 2abdee3... Test
+=======
+      <module fileurl="file://$PROJECT_DIR$/rekrutmen-labpro.iml" filepath="$PROJECT_DIR$/rekrutmen-labpro.iml" />
+>>>>>>> c1a61a7... Test
     </modules>
   </component>
 </project>

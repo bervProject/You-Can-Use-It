@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f539f970-6936-4d33-b726-f378eb829068" name="Labpro" url="https://github.com/berviantoleo/rekrutmen-labpro.git">
+        <fileTransfer host="https://github.com/berviantoleo/rekrutmen-labpro.git" port="21" username="bervianto.leo@gmail.com">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

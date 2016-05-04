@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Created by Bervianto Leo P on 26/05/2016.
  */
@@ -191,6 +193,23 @@ public class Main extends Drawers {
     private function windowsTutorialMenuChange(event:Event):void {
         var screen:WindowsTutorial = WindowsTutorial(event.currentTarget);
         this._navigator.pushScreen(screen.selectedScreenID, event.data);
+=======
+=======
+>>>>>>> 23e97b6... Test
+package {
+
+import flash.display.Sprite;
+import flash.text.TextField;
+
+public class Main extends Sprite {
+    public function Main() {
+        var textField:TextField = new TextField();
+        textField.text = "Hello, World";
+        addChild(textField);
+<<<<<<< HEAD
+>>>>>>> 2abdee3... Test
+=======
+>>>>>>> 23e97b6... Test
     }
 }
 }
