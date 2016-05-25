@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="bin" type="flex">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/starling/bin" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/starling/doc/html" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/starling/src" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/starling/bin" recursive="false" />
+  </library>
+</component>
