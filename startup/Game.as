@@ -27,7 +27,6 @@ public class Game extends Sprite {
         button1.textFormat.bold = true;
         button1.textFormat.font = "Comic Sans MS";
         button1.textFormat.size = 14;
-        button1.
 
         button1.addEventListener(Event.TRIGGERED, onClickedButton);
         addChild(button1);
