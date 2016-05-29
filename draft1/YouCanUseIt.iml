@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="YouCanUseIt">
+    <configurations>
+      <configuration name="YouCanUseIt" target-platform="Mobile" pure-as="true" main-class="YouCanUseIt" output-file="YouCanUseIt.swf" output-folder="$MODULE_DIR$/out/production/YouCanUseIt">
+        <dependencies target-player="21.0">
+          <entries>
+            <entry library-name="bin" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="feathers" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="MetalWorksMobileTheme" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="AIRSDK_Compiler" />
+        </dependencies>
+        <compiler-options />
+        <packaging-air-desktop />
+        <packaging-android enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/YouCanUseIt-app.xml" package-file-name="YouCanUseIt" />
+        <packaging-ios enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/YouCanUseIt-app.xml" package-file-name="YouCanUseIt" />
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/lib" />
+    </content>
+    <orderEntry type="jdk" jdkName="AIRSDK_Compiler" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="bin" level="project" />
+    <orderEntry type="library" exported="" name="api-reference" level="project" />
+    <orderEntry type="library" exported="" name="feathers" level="project" />
+    <orderEntry type="library" exported="" name="MetalWorksMobileTheme" level="project" />
+  </component>
+</module>
