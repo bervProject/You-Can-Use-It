@@ -2,48 +2,94 @@
  * Created by Bervianto Leo P on 26/05/2016.
  */
 package {
-import flash.geom.Rectangle;
 
-import starling.display.Image;
+import flash.text.TextFormat;
+
+import mx.core.FlexTextField;
+
+import starling.core.Starling;
 
 import starling.display.Sprite;
-import starling.events.Event;
-import starling.text.TextField;
-import starling.display.Button;
-import starling.textures.Texture;
+    import starling.events.Event;
+    import starling.text.TextField;
+    import starling.display.Button;
+    import starling.textures.Texture;
 
-public class Game extends Sprite {
-    public function Game() {
-        super();
-        this.addEventListener(starling.events.Event.ADDED_TO_STAGE, onAddedToStage);
 
-        var frame:Rectangle = new Rectangle(-40,-40,30,30);
-        var texture:Texture = Texture.fromColor(100, 40, 0x1C86EE, 1, true);
+    public class Game extends Sprite {
+        private var inputField:TextField;
+        private var welcomemsg:TextField;
+        private var nameLabel:TextField;
+        private var playButton:Button;
+        private var input:FlexTextField;
 
-        var button1:Button = new Button(texture,"Play");
-        button1.x = 100;
-        button1.y = 40;
-        button1.textFormat.color = 0xffffff;
-        button1.textFormat.bold = true;
-        button1.textFormat.font = "Comic Sans MS";
-        button1.textFormat.size = 14;
+        public function Game() {
+            super();
+            this.addEventListener(starling.events.Event.ADDED_TO_STAGE, onAddedToStage);
 
-        button1.addEventListener(Event.TRIGGERED, onClickedButton);
-        addChild(button1);
+            //Welcome Message
+            welcomemsg = new TextField(200,30,"Welcome to Starling!");
+            welcomemsg.x = 100;
+            welcomemsg.y = 0;
+            welcomemsg.format.horizontalAlign = "left";
+            welcomemsg.format.verticalAlign = "center";
+            welcomemsg.format.font = "Arial";
+            addChild(welcomemsg);
 
-        var textField:TextField = new TextField(300,20,"Welcome to Starling!");
-        addChild(textField);
+            //Name Label
+            nameLabel = new TextField(60,30,"Name :");
+            nameLabel.x = 100;
+            nameLabel.y = 40;
+            nameLabel.format.horizontalAlign = "left";
+            nameLabel.format.verticalAlign = "center";
+            nameLabel.format.font = "Arial";
+            addChild(nameLabel);
+
+            input = new FlexTextField();
+            input.maxChars = 50;
+            input.type = "input";
+            input.border = true;
+            input.width = 300;
+            input.height = 30;
+            input.x = 165;
+            input.y = 40;
+            Starling.current.nativeOverlay.addChild(input);
+
+            //Setting Button
+            var texture:Texture = Texture.fromColor(100, 40, 0x1C86EE, 1, true);
+            playButton = new Button(texture,"Play");
+            playButton.x = 100;
+            playButton.y = 80;
+            playButton.textFormat.color = 0xffffff;
+            playButton.textFormat.bold = true;
+            playButton.textFormat.font = "Comic Sans MS";
+            playButton.textFormat.size = 14;
+            playButton.addEventListener(Event.TRIGGERED, onClickedButton);
+            addChild(playButton);
+
+        }
+
+        private function onAddedToStage(event:Event):void {
+            trace("Starling Framework Initialized!");
+        }
+
+        private function onClickedButton(event:Event):void {
+            var output:TextField = new TextField(250,20,"Hello");
+            output.x = 100;
+            output.y = 0;
+            output.format.horizontalAlign = "left";
+            output.format.verticalAlign = "center";
+            output.format.font = "Arial";
+
+            output.text = output.text + " " + input.text + "!";
+
+            super.removeChild(welcomemsg);
+            super.removeChild(nameLabel);
+            super.removeChild(inputField);
+            super.removeChild(playButton);
+            Starling.current.nativeOverlay.removeChild(input);
+            addChild(output);
+        }
+
     }
-
-    private function onAddedToStage(event:Event):void {
-        trace("Starling Framework Initialized!");
-    }
-
-    private function onClickedButton(event:Event):void {
-        super.removeChildAt(0);
-        super.removeChildAt(0);
-        var textField:TextField = new TextField(300,20,"Hello! Are you Ready?");
-        addChild(textField);
-    }
-}
 }
