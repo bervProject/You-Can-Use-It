@@ -6,9 +6,11 @@ package {
 
 import flash.display.Sprite;
 import flash.events.Event;
+import flash.geom.Rectangle;
+
 import starling.core.Starling;
 
-[SWF(frameRate="60",height="480",width="800")]
+//[SWF(frameRate="60",height="720",width="1280")]
 /**
  * Main class of the project.
  */
@@ -16,6 +18,7 @@ public class YouCanUseIt extends Sprite {
 
     /** Starling object. */
     private var myStarling:Starling;
+   // private var base:Class;
 
     public function YouCanUseIt() {
         super();
@@ -30,8 +33,10 @@ public class YouCanUseIt extends Sprite {
     protected function onAddedToStage(event:Event):void {
         this.removeEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
 
+        var phoneSize:flash.geom.Rectangle = new flash.geom.Rectangle(0, 0, stage.fullScreenWidth, stage.fullScreenHeight);
+
         // Initialize Starling Object.
-        myStarling = new Starling(Game,stage);
+        myStarling = new Starling(Main, stage, phoneSize);
 
         // Define basic anti aliasing.
         myStarling.antiAliasing = 1;
@@ -44,6 +49,26 @@ public class YouCanUseIt extends Sprite {
 
         // Start Starling Framework.
         myStarling.start();
+
+        this.stage.addEventListener(Event.DEACTIVATE, stage_deactiveHandler, false, 0, true);
+    }
+
+    /**
+     * Stage deactive handler.
+     * @param event
+     */
+    private function stage_deactiveHandler(event:Event):void {
+        this.myStarling.stop(true);
+        this.stage.addEventListener(Event.ACTIVATE, stage_activateHandler, false, 0, true);
+    }
+
+    /**
+     * Stage active handler.
+     * @param event
+     */
+    private function stage_activateHandler(event:Event):void {
+        this.stage.removeEventListener(Event.ACTIVATE, stage_activateHandler);
+        this.myStarling.start();
     }
 
 }

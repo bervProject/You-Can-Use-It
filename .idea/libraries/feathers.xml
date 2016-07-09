@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="feathers" type="flex">
     <CLASSES>
-      <root url="jar://D:/TEMP/feathers-ui-3.0.0/swc/feathers.swc!/" />
+      <root url="jar://D:/lib/feathers-ui-3.0.0/swc/feathers.swc!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

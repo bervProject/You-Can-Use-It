@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="FeathersTheme" type="flex">
     <CLASSES>
-      <root url="jar://D:/TEMP/feathers-ui-3.0.0/themes/AeonDesktopTheme/swc/AeonDesktopTheme.swc!/" />
-      <root url="jar://D:/TEMP/feathers-ui-3.0.0/themes/MetalWorksDesktopTheme/swc/MetalWorksDesktopTheme.swc!/" />
-      <root url="jar://D:/TEMP/feathers-ui-3.0.0/themes/MetalWorksMobileTheme/swc/MetalWorksMobileTheme.swc!/" />
-      <root url="jar://D:/TEMP/feathers-ui-3.0.0/themes/MinimalDesktopTheme/swc/MinimalDesktopTheme.swc!/" />
-      <root url="jar://D:/TEMP/feathers-ui-3.0.0/themes/MinimalMobileTheme/swc/MinimalMobileTheme.swc!/" />
-      <root url="jar://D:/TEMP/feathers-ui-3.0.0/themes/TopcoatLightMobileTheme/swc/TopcoatLightMobileTheme.swc!/" />
+      <root url="jar://D:/lib/feathers-ui-3.0.0/themes/AeonDesktopTheme/swc/AeonDesktopTheme.swc!/" />
+      <root url="jar://D:/lib/feathers-ui-3.0.0/themes/MetalWorksDesktopTheme/swc/MetalWorksDesktopTheme.swc!/" />
+      <root url="jar://D:/lib/feathers-ui-3.0.0/themes/MetalWorksMobileTheme/swc/MetalWorksMobileTheme.swc!/" />
+      <root url="jar://D:/lib/feathers-ui-3.0.0/themes/MinimalDesktopTheme/swc/MinimalDesktopTheme.swc!/" />
+      <root url="jar://D:/lib/feathers-ui-3.0.0/themes/MinimalMobileTheme/swc/MinimalMobileTheme.swc!/" />
+      <root url="jar://D:/lib/feathers-ui-3.0.0/themes/TopcoatLightMobileTheme/swc/TopcoatLightMobileTheme.swc!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

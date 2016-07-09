@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="Starling" type="flex">
     <CLASSES>
-      <root url="jar://D:/TEMP/starling/bin/starling.swc!/" />
+      <root url="jar://D:/lib/starling/bin/starling.swc!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
