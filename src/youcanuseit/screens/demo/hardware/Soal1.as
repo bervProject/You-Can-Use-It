@@ -43,32 +43,32 @@ public class Soal1 extends LayoutGroup implements IDragSource, IDropTarget {
         this._usbcable.width = EmbeddedAssets.USB1.width;
         this._usbcable.height = EmbeddedAssets.USB1.height;
         this._usbcable.x = 10;
-        this._usbcable.y = stage.stageHeight - 250;
+        this._usbcable.y = stage.stageHeight - 150;
         this.addChild(this._usbcable);
 
         this._usbport = new USBPort(DRAG_FORMAT_USB);
-        this._usbport.width = 300;
-        this._usbport.height = 300;
-        this._usbport.x = stage.stageWidth - 300;
-        this._usbport.y = 10;
+        this._usbport.width = EmbeddedAssets.USB_PORT1.width;
+        this._usbport.height = EmbeddedAssets.USB_PORT1.height;
+        this._usbport.x = stage.stageWidth - 200;
+        this._usbport.y = 50;
         this.addChild(this._usbport);
-/*
+
         this._vgacable = new VGACable(DRAG_FORMAT_VGA);
         this._vgacable.width = EmbeddedAssets.VGA_CABLE.width;
         this._vgacable.height = EmbeddedAssets.VGA_CABLE.height;
-        this._vgacable.x = 10 + _usbcable.width + 10;
-        this._vgacable.y = stage.stageHeight - 250;
+        this._vgacable.x = (this._usbcable.x + this._usbcable.width) + 10;
+        this._vgacable.y = stage.stageHeight - 150;
         this.addChild(this._vgacable);
 
         this._vgaport = new VGAPort(DRAG_FORMAT_VGA);
-        this._vgaport.width = 300;
-        this._vgaport.height = 300;
-        this._vgaport.x = stage.stageWidth - 300 - _usbport.width - 10;
-        this._vgaport.y = 10;
+        this._vgaport.width = EmbeddedAssets.VGA_PORT.width;
+        this._vgaport.height = EmbeddedAssets.VGA_PORT.height;
+        this._vgaport.x = this._usbport.x - (10+_vgaport.width) ;
+        this._vgaport.y = 50;
         this.addChild(this._vgaport);
-*/
+
         this._usbcable.addChild(this._dragusb);
-  //      this._vgacable.addChild(this._dragvga);
+        this._vgacable.addChild(this._dragvga);
     }
 
 

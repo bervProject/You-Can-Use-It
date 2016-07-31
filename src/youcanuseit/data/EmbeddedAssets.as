@@ -65,14 +65,14 @@ public class EmbeddedAssets {
         // HARDWARE ----
 
         // USB ----
-        USB1 = Texture.fromEmbeddedAsset(USB1_EMBEDDED, false, false, 2);
-        USB2 = Texture.fromEmbeddedAsset(USB2_EMBEDDED, false, false, 2);
-        USB3 = Texture.fromEmbeddedAsset(USB3_EMBEDDED, false, false, 2);
-        USB_PORT1 = Texture.fromEmbeddedAsset(USB_PORT1_EMBEDDED, false, false, 2);
-        USB_CONNECTED = Texture.fromEmbeddedAsset(USB_CONNECTED_EMBEDDED, false, false, 2);
+        USB1 = Texture.fromEmbeddedAsset(USB1_EMBEDDED, false, false, 5);
+        USB2 = Texture.fromEmbeddedAsset(USB2_EMBEDDED, false, false, 5);
+        USB3 = Texture.fromEmbeddedAsset(USB3_EMBEDDED, false, false, 5);
+        USB_PORT1 = Texture.fromEmbeddedAsset(USB_PORT1_EMBEDDED, false, false, 5);
+        USB_CONNECTED = Texture.fromEmbeddedAsset(USB_CONNECTED_EMBEDDED, false, false, 5);
 
-        VGA_PORT = Texture.fromEmbeddedAsset(VGA_PORT_EMBEDDED, false, false, 2);
-        VGA_CABLE = Texture.fromEmbeddedAsset(VGA_CABLE_EMBEDDED, false, false, 2);
+        VGA_PORT = Texture.fromEmbeddedAsset(VGA_PORT_EMBEDDED, false, false, 10);
+        VGA_CABLE = Texture.fromEmbeddedAsset(VGA_CABLE_EMBEDDED, false, false, 8);
 
 
     }
