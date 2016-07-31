@@ -6,6 +6,7 @@ This repository is used to explore Starling Framework.
 * Startup Project Starling is [here](startup/) - For documentation is [here](startup/doc/TellYourName.pdf) - Exploration 2.
 * Project Proposal is [here](doc/You-Can-Use-It-13514047-Bervianto-Leo-P.pdf) - [revision](doc/You-Can-Use-It-13514047-Bervianto-Leo-P-revisi.pdf).
 * Project Draft 1 is [here](draft1/) - Progress Report 1 is [here](doc/ProgressReport1.md).
+* Final Project will be in root.
 
 ---
 ###### Dependency
