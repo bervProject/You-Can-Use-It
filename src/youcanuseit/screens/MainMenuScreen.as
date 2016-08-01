@@ -58,10 +58,7 @@ public class MainMenuScreen extends PanelScreen {
                     { label: "About", screen: ScreenID.ABOUT },
                 ]
         );
-        if(Capabilities.playerType == "Desktop") //this means AIR, even for mobile
-        {
-            this._list.dataProvider.addItem( { label: "Web View", screen: ScreenID.WEB_VIEW } );
-        }
+
         this._list.layoutData = new AnchorLayoutData(0, 0, 0, 0);
         this._list.clipContent = false;
         this._list.autoHideBackground = true;

@@ -2,6 +2,8 @@
  * Created by Bervianto Leo P on 13/07/2016.
  */
 package youcanuseit.data {
+import feathers.controls.Callout;
+
 import starling.textures.Texture;
 
 public class EmbeddedAssets {
@@ -51,6 +53,24 @@ public class EmbeddedAssets {
     public static var VGA_CABLE:Texture;
     public static var VGA_PORT:Texture;
 
+    // RJ-45 LAN ----
+    [Embed(source="/../assets/images/RJ45(LAN)1.jpg")]
+    private static const RJ45_LAN_EMBEDDED:Class;
+    [Embed(source="/../assets/images/RJ45Port1.jpg")]
+    private static const RJ45_LAN_PORT_EMBEDDED:Class;
+
+    public static var RJ45_LAN:Texture;
+    public static var RJ45_LAN_PORT:Texture;
+
+    // RJ-45 LAN ----
+    [Embed(source="/../assets/images/1280px-HDMI_Connector_Pinout.svg.png")]
+    private static const HDMI_EMBEDDED:Class;
+    [Embed(source="/../assets/images/hdmi-port.jpg")]
+    private static const HDMI_PORT_EMBEDDED:Class;
+
+    public static var HDMI:Texture;
+    public static var HDMI_PORT:Texture;
+
     public static function initialize():void {
 
         // ABOUT - TITLE ASSETS.
@@ -71,10 +91,17 @@ public class EmbeddedAssets {
         USB_PORT1 = Texture.fromEmbeddedAsset(USB_PORT1_EMBEDDED, false, false, 5);
         USB_CONNECTED = Texture.fromEmbeddedAsset(USB_CONNECTED_EMBEDDED, false, false, 5);
 
+        // VGA
         VGA_PORT = Texture.fromEmbeddedAsset(VGA_PORT_EMBEDDED, false, false, 10);
         VGA_CABLE = Texture.fromEmbeddedAsset(VGA_CABLE_EMBEDDED, false, false, 8);
 
+        // RJ45
+        RJ45_LAN = Texture.fromEmbeddedAsset(RJ45_LAN_EMBEDDED, false, false, 10);
+        RJ45_LAN_PORT = Texture.fromEmbeddedAsset(RJ45_LAN_PORT_EMBEDDED, false, false, 5);
 
+        //HDMI
+        HDMI = Texture.fromEmbeddedAsset(HDMI_EMBEDDED, false, false, 5);
+        HDMI_PORT = Texture.fromEmbeddedAsset(HDMI_PORT_EMBEDDED, false, false, 5);
     }
 }
 }

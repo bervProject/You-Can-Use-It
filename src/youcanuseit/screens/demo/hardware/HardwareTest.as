@@ -11,6 +11,7 @@ import feathers.data.ListCollection;
 import feathers.dragDrop.IDragSource;
 import feathers.dragDrop.IDropTarget;
 import feathers.layout.AnchorLayout;
+import feathers.layout.VerticalLayout;
 import feathers.system.DeviceCapabilities;
 import starling.core.Starling;
 import starling.display.DisplayObject;
@@ -44,20 +45,7 @@ public class HardwareTest extends PanelScreen implements IDragSource, IDropTarge
 
         this.title = "Hardware Test";
 
-        this.layout = new AnchorLayout();
-
-        this._tabs = new TabBar();
-        this._tabs.dataProvider = new ListCollection(
-                [
-                    { label: "1" },
-                    { label: "2" },
-                    { label: "3" },
-                    { label: "4" },
-                    { label: "5" },
-                ]);
-        this._tabs.width = stage.stageWidth;
-        this._tabs.addEventListener(Event.CHANGE, tabs_changeHandler);
-        this.addChild(this._tabs);
+        this.layout = new VerticalLayout();
 
         _soal1 = new Soal1();
         _soal2 = new Soal2();
@@ -78,6 +66,7 @@ public class HardwareTest extends PanelScreen implements IDragSource, IDropTarge
 
 
         this.headerFactory = this.customHeaderFactory;
+        this.footerFactory = this.customFooterFactory;
 
         //this screen doesn't use a back button on tablets because the main
         //app's uses a split layout
@@ -107,6 +96,27 @@ public class HardwareTest extends PanelScreen implements IDragSource, IDropTarge
                     ];
         }
         return header;
+    }
+
+    private function customFooterFactory():LayoutGroup
+    {
+        var footer:LayoutGroup = new LayoutGroup();
+        footer.styleNameList.add(LayoutGroup.ALTERNATE_STYLE_NAME_TOOLBAR);
+
+        this._tabs = new TabBar();
+        this._tabs.dataProvider = new ListCollection(
+                [
+                    { label: "1" },
+                    { label: "2" },
+                    { label: "3" },
+                    { label: "4" },
+                    { label: "5" },
+                ]);
+      //  this._tabs.width = stage.stageWidth;
+        this._tabs.addEventListener(Event.CHANGE, tabs_changeHandler);
+        footer.addChild(this._tabs);
+
+        return footer;
     }
 
     /**
