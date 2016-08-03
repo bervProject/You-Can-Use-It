@@ -108,6 +108,21 @@ public class HardwareTest extends PanelScreen implements IDragSource, IDropTarge
         } else if (event.finished == "soal2") {
             soal2stat.source = EmbeddedAssets.SUCCESS;
             _soal2stat = true;
+        } else if (event.finished == "soal3") {
+            soal3stat.source = EmbeddedAssets.SUCCESS;
+            _soal3stat = true;
+        } else if (event.finished == "soal4") {
+            soal4stat.source = EmbeddedAssets.SUCCESS;
+            _soal4stat = true;
+        } else if (event.finished == "soal5") {
+            soal5stat.source = EmbeddedAssets.SUCCESS;
+            _soal5stat = true;
+        } else {
+
+        }
+
+        if (_soal1stat && _soal2stat && _soal3stat && _soal4stat && _soal5stat) {
+            // Pop up Complete
         }
     }
 

@@ -27,14 +27,12 @@ import youcanuseit.screens.ScreenID;
 import starling.events.Event;
 import youcanuseit.screens.TestMenu;
 import youcanuseit.screens.TutorialMenu;
-import youcanuseit.screens.WebViewScreen;
 import youcanuseit.screens.demo.hardware.HardwareTest;
 import youcanuseit.screens.demo.software.SoftwareTest;
 import youcanuseit.screens.tutorial.android.AndroidTutorial;
 import youcanuseit.screens.tutorial.hardware.HardwareTutorial;
 import youcanuseit.screens.tutorial.linux.LinuxTutorial;
 import youcanuseit.screens.tutorial.windows.ShutdownWindows;
-import youcanuseit.screens.tutorial.windows.WindowsTutorial;
 import youcanuseit.screens.tutorial.windows.WindowsTutorial;
 
 public class Main extends Drawers {
@@ -114,13 +112,6 @@ public class Main extends Drawers {
             var shutdownWindowsItem:StackScreenNavigatorItem = new StackScreenNavigatorItem(ShutdownWindows);
             shutdownWindowsItem.addPopEvent(Event.COMPLETE);
             this._navigator.addScreen(ScreenID.WINDOWS_SHUTDOWN, shutdownWindowsItem);
-
-        if(Capabilities.playerType == "Desktop") //this means AIR, even for mobile
-        {
-            var webViewItem:StackScreenNavigatorItem = new StackScreenNavigatorItem(WebViewScreen);
-            webViewItem.addPopEvent(Event.COMPLETE);
-            this._navigator.addScreen(ScreenID.WEB_VIEW, webViewItem);
-        }
 
         if(DeviceCapabilities.isTablet(Starling.current.nativeStage))
         {

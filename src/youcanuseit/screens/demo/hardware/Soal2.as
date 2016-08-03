@@ -14,12 +14,8 @@ import starling.events.Event;
 
 import youcanuseit.data.EmbeddedAssets;
 import youcanuseit.event.HardwareTestEvent;
-import youcanuseit.event.HardwareTestEvent;
 
 public class Soal2 extends LayoutGroup {
-
-    public var completion:Boolean;
-
     private var _questionLabel:Label;
     private var questionPic:ImageLoader;
     private var _buttonGroup:ButtonGroup;
@@ -31,7 +27,6 @@ public class Soal2 extends LayoutGroup {
     }
 
     private function onAddedtoStage(event:Event):void {
-        this.completion = false;
 
         var myLayout:VerticalLayout = new VerticalLayout();
         myLayout.gap = 5;
@@ -68,7 +63,6 @@ public class Soal2 extends LayoutGroup {
 
         if (button.label == "Headphone") {
             this._buttonGroup.isEnabled = false;
-            this.completion = true;
             this._result.source = EmbeddedAssets.SUCCESS;
             this.dispatchEvent(new HardwareTestEvent(HardwareTestEvent.FINISHED, "soal2", true));
         } else {

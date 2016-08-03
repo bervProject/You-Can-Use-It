@@ -2,8 +2,6 @@
  * Created by Bervianto Leo P on 13/07/2016.
  */
 package youcanuseit.data {
-import feathers.controls.Callout;
-
 import starling.textures.Texture;
 
 public class EmbeddedAssets {
@@ -71,6 +69,24 @@ public class EmbeddedAssets {
     public static var HDMI:Texture;
     public static var HDMI_PORT:Texture;
 
+    // Audio
+    [Embed(source="/../assets/images/audioport.jpg")]
+    private static const AUDIO_PORT_EMBEDDED:Class;
+    [Embed(source="/../assets/images/Audio-TRS-Mini-Plug.jpg")]
+    private static const AUDIO_JACK_EMBEDDED:Class;
+
+    public static var AUDIO_PORT:Texture;
+    public static var AUDIO_JACK:Texture;
+
+    // Success or No
+    [Embed(source="/../assets/images/148705-essential-collection/png/success.png")]
+    private static const SUCCESS_EMBEDDED:Class;
+    [Embed(source="/../assets/images/148705-essential-collection/png/error.png")]
+    private static const FALSE_EMBEDDED:Class;
+
+    public static var SUCCESS:Texture;
+    public static var FALSE:Texture;
+
     public static function initialize():void {
 
         // ABOUT - TITLE ASSETS.
@@ -96,12 +112,20 @@ public class EmbeddedAssets {
         VGA_CABLE = Texture.fromEmbeddedAsset(VGA_CABLE_EMBEDDED, false, false, 8);
 
         // RJ45
-        RJ45_LAN = Texture.fromEmbeddedAsset(RJ45_LAN_EMBEDDED, false, false, 10);
+        RJ45_LAN = Texture.fromEmbeddedAsset(RJ45_LAN_EMBEDDED, false, false, 20);
         RJ45_LAN_PORT = Texture.fromEmbeddedAsset(RJ45_LAN_PORT_EMBEDDED, false, false, 5);
 
-        //HDMI
-        HDMI = Texture.fromEmbeddedAsset(HDMI_EMBEDDED, false, false, 5);
+        // HDMI
+        HDMI = Texture.fromEmbeddedAsset(HDMI_EMBEDDED, false, false, 18);
         HDMI_PORT = Texture.fromEmbeddedAsset(HDMI_PORT_EMBEDDED, false, false, 5);
+
+        // AUDIO
+        AUDIO_PORT = Texture.fromEmbeddedAsset(AUDIO_PORT_EMBEDDED, false, false, 2);
+        AUDIO_JACK = Texture.fromEmbeddedAsset(AUDIO_JACK_EMBEDDED, false, false, 5);
+
+        // SUCCESS OR NO
+        SUCCESS = Texture.fromEmbeddedAsset(SUCCESS_EMBEDDED, false, false, 15);
+        FALSE = Texture.fromEmbeddedAsset(FALSE_EMBEDDED, false, false, 15);
     }
 }
 }
