@@ -9,6 +9,7 @@ import feathers.dragDrop.DragDropManager;
 import feathers.dragDrop.IDragSource;
 import feathers.events.DragDropEvent;
 import feathers.layout.AnchorLayoutData;
+import feathers.layout.VerticalLayout;
 
 import starling.display.DisplayObject;
 import starling.events.Touch;
@@ -20,6 +21,7 @@ import youcanuseit.screens.demo.hardware.Soal1;
 
 public class DragSource extends LayoutGroup implements IDragSource
 {
+
     public function DragSource(dragFormat:String)
     {
         this._dragFormat = dragFormat;
@@ -35,7 +37,10 @@ public class DragSource extends LayoutGroup implements IDragSource
 
     override protected function initialize():void
     {
-
+        var theLayout:VerticalLayout = new VerticalLayout();
+        theLayout.horizontalAlign = "center";
+        theLayout.verticalAlign = "middle";
+        this.layout = theLayout;
     }
 
     private function touchHandler(event:TouchEvent):void
@@ -59,8 +64,10 @@ public class DragSource extends LayoutGroup implements IDragSource
                     avatar.source = EmbeddedAssets.VGA_CABLE;
                 } else if (_dragFormat == Soal1.DRAG_FORMAT_RJ45) {
                     avatar.source = EmbeddedAssets.RJ45_LAN;
+                } else if (_dragFormat == Soal1.DRAG_FORMAT_HDMI) {
+                    avatar.source = EmbeddedAssets.HDMI;
                 } else {
-                    avatar.source = EmbeddedAssets.STARLING_LOGO;
+                    avatar.source = EmbeddedAssets.FALSE;
                 }
 
                 avatar.layoutData = new AnchorLayoutData(0, 0, 0, 0);
