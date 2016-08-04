@@ -2,6 +2,7 @@
  * Created by Bervianto Leo P on 14/07/2016.
  */
 package youcanuseit.screens.demo.hardware {
+import feathers.controls.Alert;
 import feathers.controls.Button;
 import feathers.controls.Header;
 import feathers.controls.ImageLoader;
@@ -19,7 +20,7 @@ import starling.display.DisplayObject;
 import starling.events.Event;
 
 import youcanuseit.data.EmbeddedAssets;
-import youcanuseit.event.HardwareTestEvent;
+import youcanuseit.event.TestEvent;
 
 
 [Event(name="complete",type="starling.events.Event")]
@@ -91,7 +92,7 @@ public class HardwareTest extends PanelScreen implements IDragSource, IDropTarge
         this.headerFactory = this.customHeaderFactory;
         this.footerFactory = this.customFooterFactory;
 
-        this.addEventListener(HardwareTestEvent.FINISHED, onFinished);
+        this.addEventListener(TestEvent.FINISHED, onFinished);
 
         //this screen doesn't use a back button on tablets because the main
         //app's uses a split layout
@@ -103,7 +104,7 @@ public class HardwareTest extends PanelScreen implements IDragSource, IDropTarge
         this.verticalScrollPolicy = SCROLL_POLICY_OFF;
     }
 
-    private function onFinished(event:HardwareTestEvent):void {
+    private function onFinished(event:TestEvent):void {
 
         if (event.finished == "soal1") {
             soal1stat.source = EmbeddedAssets.SUCCESS;
@@ -125,10 +126,25 @@ public class HardwareTest extends PanelScreen implements IDragSource, IDropTarge
         }
 
         if (_soal1stat && _soal2stat && _soal3stat && _soal4stat && _soal5stat) {
-            // Pop up Complete
+            var alert:Alert = Alert.show("I just wanted you to know that I have a very important message to share with you.", "Alert", new ListCollection(
+                    [
+                        { label: "OK" }
+                    ]));
+            alert.addEventListener(Event.CLOSE, alert_closeHandler);
         }
     }
 
+    private function alert_closeHandler(event:Event, data:Object):void
+    {
+        if(data)
+        {
+            trace("alert closed with button:", data.label);
+        }
+        else
+        {
+            trace("alert closed without button");
+        }
+    }
     /**
      * Customize Header.
      * @return

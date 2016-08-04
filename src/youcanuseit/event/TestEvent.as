@@ -4,12 +4,12 @@
 package youcanuseit.event {
 import starling.events.Event;
 
-public class HardwareTestEvent extends Event {
+public class TestEvent extends Event {
     public static const FINISHED:String = "finished";
 
     private var soalClear:String;
 
-    public function HardwareTestEvent(type:String, finished:String, bubbles:Boolean=false) {
+    public function TestEvent(type:String, finished:String, bubbles:Boolean=false) {
         super(type, bubbles);
         soalClear = finished;
     }

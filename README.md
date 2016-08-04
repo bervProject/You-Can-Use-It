@@ -8,6 +8,7 @@ This repository is used to explore Starling Framework.
 * Project Draft 1 is [here](draft1/) - Progress Report 1 is [here](doc/ProgressReport1.md).
 * Progress Report 2 is [here](doc/ProgressReport2.md).
 * Final Project will be in root.
+* Project Schedule is [here](doc/Reminder.md).
 
 ---
 ###### Dependency

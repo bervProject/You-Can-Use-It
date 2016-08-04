@@ -46,8 +46,6 @@ public class YouCanUseIt extends Sprite {
         }
         this.mouseEnabled = this.mouseChildren = false;
 
-//        var phoneSize:flash.geom.Rectangle = new flash.geom.Rectangle(0, 0, stage.fullScreenWidth, stage.fullScreenHeight);
-
         Starling.multitouchEnabled = true;
         // Initialize Starling Object.
         this.myStarling = new Starling(Main, this.stage, null, null, Context3DRenderMode.AUTO, Context3DProfile.BASELINE);
@@ -56,10 +54,10 @@ public class YouCanUseIt extends Sprite {
         this.myStarling.skipUnchangedFrames = true;
 
         // Show statistics for memory usage and fps.
-        this.myStarling.showStats = true;
+        //this.myStarling.showStats = true;
 
         // Position stats.
-        this.myStarling.showStatsAt("left","bottom");
+        //this.myStarling.showStatsAt("left","bottom");
 
         // Start Starling Framework.
         this.myStarling.start();

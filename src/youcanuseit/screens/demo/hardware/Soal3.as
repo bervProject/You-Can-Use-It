@@ -6,17 +6,15 @@ import feathers.controls.Button;
 import feathers.controls.ImageLoader;
 import feathers.controls.Label;
 import feathers.controls.LayoutGroup;
-import feathers.controls.TextArea;
 import feathers.controls.TextInput;
 import feathers.events.FeathersEventType;
-import feathers.layout.HorizontalAlign;
 import feathers.layout.HorizontalLayout;
 import feathers.layout.VerticalLayout;
 
 import starling.events.Event;
 
 import youcanuseit.data.EmbeddedAssets;
-import youcanuseit.event.HardwareTestEvent;
+import youcanuseit.event.TestEvent;
 
 public class Soal3 extends LayoutGroup {
 
@@ -82,7 +80,7 @@ public class Soal3 extends LayoutGroup {
             this.inputBox.isEnabled = false;
             this.inputButton.isEnabled = false;
             this.result.source = EmbeddedAssets.SUCCESS;
-            dispatchEvent(new HardwareTestEvent(HardwareTestEvent.FINISHED, "soal3", true));
+            dispatchEvent(new TestEvent(TestEvent.FINISHED, "soal3", true));
         } else {
             this.result.source = EmbeddedAssets.FALSE;
         }

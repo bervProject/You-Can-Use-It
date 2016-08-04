@@ -13,7 +13,7 @@ import feathers.layout.VerticalLayout;
 import starling.events.Event;
 
 import youcanuseit.data.EmbeddedAssets;
-import youcanuseit.event.HardwareTestEvent;
+import youcanuseit.event.TestEvent;
 
 public class Soal2 extends LayoutGroup {
     private var _questionLabel:Label;
@@ -64,7 +64,7 @@ public class Soal2 extends LayoutGroup {
         if (button.label == "Headphone") {
             this._buttonGroup.isEnabled = false;
             this._result.source = EmbeddedAssets.SUCCESS;
-            this.dispatchEvent(new HardwareTestEvent(HardwareTestEvent.FINISHED, "soal2", true));
+            this.dispatchEvent(new TestEvent(TestEvent.FINISHED, "soal2", true));
         } else {
             this._result.source = EmbeddedAssets.FALSE;
         }

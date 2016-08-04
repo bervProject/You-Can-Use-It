@@ -8,7 +8,6 @@ import feathers.controls.LayoutGroup;
 import feathers.dragDrop.IDragSource;
 import feathers.dragDrop.IDropTarget;
 import feathers.layout.TiledRowsLayout;
-import feathers.layout.VerticalAlign;
 import feathers.layout.VerticalLayout;
 
 import starling.display.Image;
@@ -17,7 +16,7 @@ import starling.events.Event;
 import youcanuseit.data.EmbeddedAssets;
 import youcanuseit.draggable.DragSource;
 import youcanuseit.draggable.DropTarget;
-import youcanuseit.event.HardwareTestEvent;
+import youcanuseit.event.TestEvent;
 
 
 public class Soal1 extends LayoutGroup implements IDragSource, IDropTarget {
@@ -169,28 +168,28 @@ public class Soal1 extends LayoutGroup implements IDragSource, IDropTarget {
     private function success1(event:Event):void {
         _stat1 = true;
         if (isFinished()) {
-            dispatchEvent(new HardwareTestEvent(HardwareTestEvent.FINISHED, "soal1", true));
+            dispatchEvent(new TestEvent(TestEvent.FINISHED, "soal1", true));
         }
     }
 
     private function success2(event:Event):void {
         _stat2 = true;
         if (isFinished()) {
-            dispatchEvent(new HardwareTestEvent(HardwareTestEvent.FINISHED, "soal1", true));
+            dispatchEvent(new TestEvent(TestEvent.FINISHED, "soal1", true));
         }
     }
 
     private function success3(event:Event):void {
         _stat3 = true;
         if (isFinished()) {
-            dispatchEvent(new HardwareTestEvent(HardwareTestEvent.FINISHED, "soal1", true));
+            dispatchEvent(new TestEvent(TestEvent.FINISHED, "soal1", true));
         }
     }
 
     private function success4(event:Event):void {
         _stat4 = true;
         if (isFinished()) {
-            dispatchEvent(new HardwareTestEvent(HardwareTestEvent.FINISHED, "soal1", true));
+            dispatchEvent(new TestEvent(TestEvent.FINISHED, "soal1", true));
         }
     }
 
