@@ -13,7 +13,7 @@ https://cdn2.iconfinder.com/data/icons/computer-wires/512/HDMI-512.png
 http://preview.turbosquid.com/Preview/2014/07/11__00_43_53/Lan1.pngf017fe84-99b6-4863-b20c-f5c1105c624cOriginal.jpg -- RJ45Port1
 http://cf.ydcdn.net/1.0.1.58/images/computer/RJ45.GIF
 http://playstationna.i.lithium.com/t5/image/serverpage/image-id/396985iA34F85FE59EC34A8?v=v2 -- RJ45(LAN)1
-https://s3.amazonaws.com/user-media.venngage.com/421083-b4e04774b3fb35c97ef71db21ccb6ec8.jpg
+https://s3.amazonaws.com/user-media.venngage.com/421083-b4e04774b3fb35c97ef71db21ccb6ec8.jpg -- audioport
 https://upload.wikimedia.org/wikipedia/commons/8/8b/Audio-TRS-Mini-Plug.jpg
 
 

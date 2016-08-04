@@ -2,9 +2,12 @@
  * Created by Bervianto Leo P on 13/07/2016.
  */
 package youcanuseit.data {
+import starling.core.Starling;
 import starling.textures.Texture;
 
 public class EmbeddedAssets {
+
+    private static const scale:Number = Starling.current.contentScaleFactor;
 
     // ABOUT - TITLE ASSETS
 
@@ -87,6 +90,12 @@ public class EmbeddedAssets {
     public static var SUCCESS:Texture;
     public static var FALSE:Texture;
 
+    // POWER BUTTON
+    [Embed(source="/../assets/images/power-button-1242468.jpg")]
+    private static const POWER_BUTTON_EMBEDDED:Class;
+
+    public static var POWER_BUTTON:Texture;
+
     public static function initialize():void {
 
         // ABOUT - TITLE ASSETS.
@@ -101,31 +110,34 @@ public class EmbeddedAssets {
         // HARDWARE ----
 
         // USB ----
-        USB1 = Texture.fromEmbeddedAsset(USB1_EMBEDDED, false, false, 5);
-        USB2 = Texture.fromEmbeddedAsset(USB2_EMBEDDED, false, false, 5);
-        USB3 = Texture.fromEmbeddedAsset(USB3_EMBEDDED, false, false, 5);
-        USB_PORT1 = Texture.fromEmbeddedAsset(USB_PORT1_EMBEDDED, false, false, 5);
-        USB_CONNECTED = Texture.fromEmbeddedAsset(USB_CONNECTED_EMBEDDED, false, false, 5);
+        USB1 = Texture.fromEmbeddedAsset(USB1_EMBEDDED, false, false, 6);
+        USB2 = Texture.fromEmbeddedAsset(USB2_EMBEDDED, false, false, 10);
+        USB3 = Texture.fromEmbeddedAsset(USB3_EMBEDDED, false, false, 10);
+        USB_PORT1 = Texture.fromEmbeddedAsset(USB_PORT1_EMBEDDED, false, false, 10);
+        USB_CONNECTED = Texture.fromEmbeddedAsset(USB_CONNECTED_EMBEDDED, false, false, 10);
 
         // VGA
-        VGA_PORT = Texture.fromEmbeddedAsset(VGA_PORT_EMBEDDED, false, false, 10);
-        VGA_CABLE = Texture.fromEmbeddedAsset(VGA_CABLE_EMBEDDED, false, false, 8);
+        VGA_PORT = Texture.fromEmbeddedAsset(VGA_PORT_EMBEDDED, false, false, 2);
+        VGA_CABLE = Texture.fromEmbeddedAsset(VGA_CABLE_EMBEDDED, false, false, 12);
 
         // RJ45
-        RJ45_LAN = Texture.fromEmbeddedAsset(RJ45_LAN_EMBEDDED, false, false, 20);
-        RJ45_LAN_PORT = Texture.fromEmbeddedAsset(RJ45_LAN_PORT_EMBEDDED, false, false, 5);
+        RJ45_LAN = Texture.fromEmbeddedAsset(RJ45_LAN_EMBEDDED, false, false, 30);
+        RJ45_LAN_PORT = Texture.fromEmbeddedAsset(RJ45_LAN_PORT_EMBEDDED, false, false, 10);
 
         // HDMI
-        HDMI = Texture.fromEmbeddedAsset(HDMI_EMBEDDED, false, false, 18);
-        HDMI_PORT = Texture.fromEmbeddedAsset(HDMI_PORT_EMBEDDED, false, false, 5);
+        HDMI = Texture.fromEmbeddedAsset(HDMI_EMBEDDED, false, false, 20);
+        HDMI_PORT = Texture.fromEmbeddedAsset(HDMI_PORT_EMBEDDED, false, false, 10);
 
         // AUDIO
         AUDIO_PORT = Texture.fromEmbeddedAsset(AUDIO_PORT_EMBEDDED, false, false, 2);
-        AUDIO_JACK = Texture.fromEmbeddedAsset(AUDIO_JACK_EMBEDDED, false, false, 5);
+        AUDIO_JACK = Texture.fromEmbeddedAsset(AUDIO_JACK_EMBEDDED, false, false, 10);
 
         // SUCCESS OR NO
-        SUCCESS = Texture.fromEmbeddedAsset(SUCCESS_EMBEDDED, false, false, 15);
-        FALSE = Texture.fromEmbeddedAsset(FALSE_EMBEDDED, false, false, 15);
+        SUCCESS = Texture.fromEmbeddedAsset(SUCCESS_EMBEDDED, false, false, 20);
+        FALSE = Texture.fromEmbeddedAsset(FALSE_EMBEDDED, false, false, 20);
+
+        // POWER_BUTTON
+        POWER_BUTTON = Texture.fromEmbeddedAsset(POWER_BUTTON_EMBEDDED, false, false, 10);
     }
 }
 }

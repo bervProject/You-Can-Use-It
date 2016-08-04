@@ -68,8 +68,11 @@ public class HardwareTest extends PanelScreen implements IDragSource, IDropTarge
         centeredLayoutData.horizontalCenter = 0;
         centeredLayoutData.verticalCenter = 0;
 
-        _soal1.layoutData = centeredLayoutData;
-        _soal2.layoutData = centeredLayoutData;
+        var centeredLayoutData1:AnchorLayoutData = new AnchorLayoutData();
+        centeredLayoutData1.horizontalCenter = 0;
+
+        _soal1.layoutData = centeredLayoutData1;
+        _soal2.layoutData = centeredLayoutData1;
         _soal3.layoutData = centeredLayoutData;
         _soal4.layoutData = centeredLayoutData;
         _soal5.layoutData = centeredLayoutData;
@@ -203,15 +206,30 @@ public class HardwareTest extends PanelScreen implements IDragSource, IDropTarge
 
         hideall();
         if (_tabs.selectedIndex == 0) {
-            _soal1.visible = true;
+            this.scrollToPosition(0,0,0);
+            this._soal1.visible = true;
+            this.horizontalScrollPolicy = SCROLL_POLICY_OFF;
+            this.verticalScrollPolicy = SCROLL_POLICY_OFF;
         } else if (_tabs.selectedIndex == 1) {
-            _soal2.visible = true;
+            this.scrollToPosition(0,0,0);
+            this._soal2.visible = true;
+            this.horizontalScrollPolicy = SCROLL_POLICY_OFF;
+            this.verticalScrollPolicy = SCROLL_POLICY_ON;
         } else if (_tabs.selectedIndex == 2) {
-            _soal3.visible = true;
+            this.scrollToPosition(0,0,0);
+            this._soal3.visible = true;
+            this.horizontalScrollPolicy = SCROLL_POLICY_OFF;
+            this.verticalScrollPolicy = SCROLL_POLICY_OFF;
         } else if (_tabs.selectedIndex == 3) {
-            _soal4.visible = true;
+            this.scrollToPosition(0,0,0);
+            this._soal4.visible = true;
+            this.horizontalScrollPolicy = SCROLL_POLICY_OFF;
+            this.verticalScrollPolicy = SCROLL_POLICY_ON;
         } else if (_tabs.selectedIndex == 4) {
-            _soal5.visible = true;
+            this.scrollToPosition(0,0,0);
+            this._soal5.visible = true;
+            this.horizontalScrollPolicy = SCROLL_POLICY_OFF;
+            this.verticalScrollPolicy = SCROLL_POLICY_ON;
         } else {
 
         }

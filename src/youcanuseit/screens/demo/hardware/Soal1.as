@@ -47,6 +47,8 @@ public class Soal1 extends LayoutGroup implements IDragSource, IDropTarget {
     private var _stat3:Boolean;
     private var _stat4:Boolean;
 
+    private const size:int = 65;
+
     private var instruction:Label;
 
     public function Soal1() {
@@ -84,23 +86,23 @@ public class Soal1 extends LayoutGroup implements IDragSource, IDropTarget {
         soalContainer.layout = myLayout;
 
         var usbPort:Image = new Image(EmbeddedAssets.USB_PORT1);
-        usbPort.width = 100;
-        usbPort.height = 100;
+        usbPort.width = size;
+        usbPort.height = size;
         soalContainer.addChild(usbPort);
 
         var vgaPort:Image = new Image(EmbeddedAssets.VGA_PORT);
-        vgaPort.width = 100;
-        vgaPort.height = 50;
+        vgaPort.width = size;
+        vgaPort.height = size - 25;
         soalContainer.addChild(vgaPort);
 
         var rj45Port:Image = new Image(EmbeddedAssets.RJ45_LAN_PORT);
-        rj45Port.width = 100;
-        rj45Port.height = 100;
+        rj45Port.width = size;
+        rj45Port.height = size;
         soalContainer.addChild(rj45Port);
 
         var hdmiPort:Image = new Image(EmbeddedAssets.HDMI_PORT);
-        hdmiPort.width = 100;
-        hdmiPort.height = 75;
+        hdmiPort.width = size;
+        hdmiPort.height = size - 25;
         soalContainer.addChild(hdmiPort);
 
         _droppath1 = new DropTarget(DRAG_FORMAT_USB);
@@ -108,14 +110,14 @@ public class Soal1 extends LayoutGroup implements IDragSource, IDropTarget {
         _droppath3 = new DropTarget(DRAG_FORMAT_RJ45);
         _droppath4 = new DropTarget(DRAG_FORMAT_HDMI);
 
-        _droppath1.width = 100;
-        _droppath1.height = 100;
-        _droppath2.width = 100;
-        _droppath2.height = 100;
-        _droppath3.width = 100;
-        _droppath3.height = 100;
-        _droppath4.width = 100;
-        _droppath4.height = 100;
+        _droppath1.width = size;
+        _droppath1.height = size;
+        _droppath2.width = size;
+        _droppath2.height = size;
+        _droppath3.width = size;
+        _droppath3.height = size;
+        _droppath4.width = size;
+        _droppath4.height = size;
 
         soalContainer.addChild(_droppath1);
         soalContainer.addChild(_droppath2);
@@ -129,26 +131,26 @@ public class Soal1 extends LayoutGroup implements IDragSource, IDropTarget {
 
         vgaCable = new ImageLoader();
         vgaCable.source = EmbeddedAssets.VGA_CABLE;
-        _dragpath1.width = 100;
-        _dragpath1.height = 100;
+        _dragpath1.width = size;
+        _dragpath1.height = size - 25;
         _dragpath1.addChild(vgaCable);
 
         rj45Cable = new ImageLoader();
         rj45Cable.source = EmbeddedAssets.RJ45_LAN;
-        _dragpath2.width = 100;
-        _dragpath2.height = 100;
+        _dragpath2.width = size;
+        _dragpath2.height = size - 25;
         _dragpath2.addChild(rj45Cable);
 
         usbCable = new ImageLoader();
         usbCable.source = EmbeddedAssets.USB1;
-        _dragpath3.width = 100;
-        _dragpath3.height = 100;
+        _dragpath3.width = size - 25;
+        _dragpath3.height = size;
         _dragpath3.addChild(usbCable);
 
         hdmiCable = new ImageLoader();
         hdmiCable.source = EmbeddedAssets.HDMI;
-        _dragpath4.width = 100;
-        _dragpath4.height = 100;
+        _dragpath4.width = size;
+        _dragpath4.height = size - 25;
         _dragpath4.addChild(hdmiCable);
 
         soalContainer.addChild(_dragpath1);

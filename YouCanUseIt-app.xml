@@ -147,9 +147,10 @@
         <image144x144></image144x144>
         <image152x152></image152x152>
         <image512x512></image512x512>
-        <image732x412></image732x412>
-        <image1024x1024></image1024x1024>
-    </icon>-->
+        <image732x412></image732x412> -->
+    <icon>
+        <image1024x1024>logo.png</image1024x1024>
+    </icon>
 
     <!-- Whether the application handles the update when a user double-clicks an update version of the AIR file (true),
          or the default AIR application installer handles the update (false). Optional. Default false. -->

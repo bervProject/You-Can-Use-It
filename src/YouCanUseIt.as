@@ -4,13 +4,19 @@
 
 package {
 
+import feathers.utils.ScreenDensityScaleFactorManager;
+
 import flash.display.Sprite;
+import flash.display.StageAlign;
+import flash.display.StageScaleMode;
+import flash.display3D.Context3DProfile;
+import flash.display3D.Context3DRenderMode;
 import flash.events.Event;
 import flash.geom.Rectangle;
 
 import starling.core.Starling;
 
-//[SWF(frameRate="60",height="720",width="1280")]
+[SWF(width="960",height="640",frameRate="60",backgroundColor="#4a4137")]
 /**
  * Main class of the project.
  */
@@ -18,7 +24,7 @@ public class YouCanUseIt extends Sprite {
 
     /** Starling object. */
     private var myStarling:Starling;
-   // private var base:Class;
+    private var _scaler:ScreenDensityScaleFactorManager;
 
     public function YouCanUseIt() {
         super();
@@ -33,22 +39,32 @@ public class YouCanUseIt extends Sprite {
     protected function onAddedToStage(event:Event):void {
         this.removeEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
 
-        var phoneSize:flash.geom.Rectangle = new flash.geom.Rectangle(0, 0, stage.fullScreenWidth, stage.fullScreenHeight);
+        if(this.stage)
+        {
+            this.stage.scaleMode = StageScaleMode.NO_SCALE;
+            this.stage.align = StageAlign.TOP_LEFT;
+        }
+        this.mouseEnabled = this.mouseChildren = false;
 
+//        var phoneSize:flash.geom.Rectangle = new flash.geom.Rectangle(0, 0, stage.fullScreenWidth, stage.fullScreenHeight);
+
+        Starling.multitouchEnabled = true;
         // Initialize Starling Object.
-        myStarling = new Starling(Main, stage, phoneSize);
+        this.myStarling = new Starling(Main, this.stage, null, null, Context3DRenderMode.AUTO, Context3DProfile.BASELINE);
 
-        // Define basic anti aliasing.
-        myStarling.antiAliasing = 1;
+        this.myStarling.supportHighResolutions = true;
+        this.myStarling.skipUnchangedFrames = true;
 
         // Show statistics for memory usage and fps.
-        myStarling.showStats = true;
+        this.myStarling.showStats = true;
 
         // Position stats.
-        myStarling.showStatsAt("left","bottom");
+        this.myStarling.showStatsAt("left","bottom");
 
         // Start Starling Framework.
-        myStarling.start();
+        this.myStarling.start();
+
+        this._scaler = new ScreenDensityScaleFactorManager(this.myStarling);
 
         this.stage.addEventListener(Event.DEACTIVATE, stage_deactiveHandler, false, 0, true);
     }

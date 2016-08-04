@@ -11,9 +11,6 @@ import feathers.events.FeathersEventType;
 import feathers.layout.AnchorLayout;
 import feathers.layout.AnchorLayoutData;
 import feathers.system.DeviceCapabilities;
-
-import flash.system.Capabilities;
-
 import starling.core.Starling;
 import starling.events.Event;
 

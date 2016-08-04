@@ -17,9 +17,22 @@
           </entries>
           <sdk name="AIRSDK_Compiler" />
         </dependencies>
-        <compiler-options />
+        <compiler-options>
+          <map>
+            <entry key="metadata.contributor" value="Bervianto Leo Pratama" />
+            <entry key="metadata.creator" value="Bervianto Leo Pratama" />
+            <entry key="metadata.description" value="Education Application" />
+            <entry key="metadata.language" value="English and Bahasa Indonesia" />
+            <entry key="metadata.publisher" value="Bervianto Leo Pratama" />
+            <entry key="metadata.title" value="You Can Use It" />
+          </map>
+        </compiler-options>
         <packaging-air-desktop />
-        <packaging-android enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/YouCanUseIt-app.xml" package-file-name="YouCanUseIt" />
+        <packaging-android enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/YouCanUseIt-app.xml" package-file-name="YouCanUseIt">
+          <files-to-package>
+            <FilePathAndPathInPackage file-path="$MODULE_DIR$/src" path-in-package="." />
+          </files-to-package>
+        </packaging-android>
         <packaging-ios enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/YouCanUseIt-app.xml" package-file-name="YouCanUseIt" />
       </configuration>
     </configurations>
