@@ -1,0 +1,69 @@
+buildscript {
+	repositories {
+		mavenLocal()
+		mavenCentral()
+	}
+	dependencies {
+		classpath group: 'org.gradlefx', name: 'gradlefx', version: '1.4.0'
+	}
+}
+
+apply plugin: 'gradlefx'
+apply plugin: 'scaffold'
+apply plugin: 'ideafx'
+
+version = '1.0-SNAPSHOT'
+type = 'mobile'
+frameworkLinkage = 'none'
+
+repositories {
+	ivy {
+		name 'Flex SDK'
+		artifactPattern 'http://download.macromedia.com/pub/flex/sdk/[module]_[revision].[ext]'
+	}
+	
+	ivy {
+		name 'Adobe Air SDK'
+		artifactPattern 'http://airdownload.adobe.com/air/win/download/[revision]/[module].[ext]'
+	}
+
+}
+
+dependencies {
+	flexSDK group: 'org.apache', name: 'flex_sdk', version: '4.6', ext: 'zip'
+	//airSDK group: 'com.adobe', name: 'AdobeAIRSDK', version: 'latest', ext: 'zip'
+}
+
+additionalCompilerOptions = [
+	'-swf-version=26'
+]
+
+air {
+	storepass = 'gradlefx'
+	tsa = 'none'
+	includeFileTrees = [
+		fileTree(dir: 'src/main/youcanuseit/', include: ['assets/*'])
+	]
+	
+	fileOptions = [
+		'-C',
+		'src/main/youcanuseit/',
+		'sound'
+	]
+}
+
+airMobile {
+	target = 'apk-debug'
+}
+
+sdkAutoInstall {
+	showPrompts = false
+}
+
+task wrapper(type: Wrapper) {
+    group = 'Buildmaster'
+    description = 'Generates gradlew and gradlew.bat bootstrap scripts'
+    gradleVersion = '4.0.2'
+    // place jar file and properties into a subdirectory to avoid root dir clutter
+    jarFile = 'buildSrc/wrapper/gradle.jar'
+}

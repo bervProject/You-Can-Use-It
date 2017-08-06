@@ -2,9 +2,23 @@
 bin/
 bin-debug/
 bin-release/
+out/
+[Oo]bj/ # FlashDevelop obj
+[Bb]in/ # FlashDevelop bin
+
+# Gradle
+.gradle
+buildSrc/.gradle
+buildSrc/build
 
 # Other files and folders
 .settings/
+
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
 
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important

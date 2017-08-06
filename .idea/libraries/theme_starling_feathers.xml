@@ -1,0 +1,29 @@
+<component name="libraryTable">
+  <library name="theme_starling_feathers" type="flex">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/lib/swc" />
+      <root url="file://$PROJECT_DIR$/lib/themes/AeonDesktopTheme/swc" />
+      <root url="file://$PROJECT_DIR$/lib/themes/MetalWorksDesktopTheme/swc" />
+      <root url="file://$PROJECT_DIR$/lib/themes/MetalWorksMobileTheme/swc" />
+      <root url="file://$PROJECT_DIR$/lib/themes/MinimalDesktopTheme/swc" />
+      <root url="file://$PROJECT_DIR$/lib/themes/MinimalMobileTheme/swc" />
+      <root url="file://$PROJECT_DIR$/lib/themes/TopcoatLightMobileTheme/swc" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/lib/themes/AeonDesktopTheme/source" />
+      <root url="file://$PROJECT_DIR$/lib/themes/MetalWorksDesktopTheme/source" />
+      <root url="file://$PROJECT_DIR$/lib/themes/MetalWorksMobileTheme/source" />
+      <root url="file://$PROJECT_DIR$/lib/themes/MinimalDesktopTheme/source" />
+      <root url="file://$PROJECT_DIR$/lib/themes/MinimalMobileTheme/source" />
+      <root url="file://$PROJECT_DIR$/lib/themes/TopcoatLightMobileTheme/source" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/lib/swc" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/themes/AeonDesktopTheme/swc" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/themes/MetalWorksDesktopTheme/swc" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/themes/MetalWorksMobileTheme/swc" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/themes/MinimalDesktopTheme/swc" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/themes/MinimalMobileTheme/swc" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/themes/TopcoatLightMobileTheme/swc" recursive="false" />
+  </library>
+</component>
