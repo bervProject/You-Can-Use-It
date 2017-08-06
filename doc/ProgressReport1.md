@@ -24,24 +24,24 @@ Berikut ini screenshot program yang terdiri dari :
 
 * Main Menu
 
-![Alt Text](https://raw.githubusercontent.com/berviantoleo/rekrutmen-labpro/master/screenshots/draft1-main.png "Main Menu")
+![Main Menu](/screenshots/draft1-main.png "Main Menu")
 
 * Tutorial
 
-![Alt Text](https://raw.githubusercontent.com/berviantoleo/rekrutmen-labpro/master/screenshots/draft1-tutorial.png "Tutorial Menu")
+![Tutorial](/screenshots/draft1-tutorial.png "Tutorial Menu")
 
 Masih dalam proses pemberian tutorial, berupa informasi dan video tutorial.
 
 * About
  
-![Alt Text](https://raw.githubusercontent.com/berviantoleo/rekrutmen-labpro/master/screenshots/draft1-about.png "About Menu")
+![About](/screenshots/draft1-about.png "About Menu")
 
 * DEMO / Test Mode
  
-![Alt Text](https://raw.githubusercontent.com/berviantoleo/rekrutmen-labpro/master/screenshots/draft1-testmode.png "Test Mode")
+![Demo](/screenshots/draft1-testmode.png "Test Mode")
 
 Kondisi awal
 
-![Alt Text](https://raw.githubusercontent.com/berviantoleo/rekrutmen-labpro/master/screenshots/draft1-testmode(success).png "Test Mode Success")
+![Test Mode](/screenshots/draft1-testmode(success).png "Test Mode Success")
 
 Kondisi akhir jika pengguna berhasil memindahkan dengan tepat
