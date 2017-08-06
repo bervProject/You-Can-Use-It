@@ -25,7 +25,6 @@ This repository is used to explore Starling Framework.
 ![Test 4](screenshots/test-4.png)
 ![Test 5](screenshots/test-5.png)
 ![Test 6](screenshots/test-6.png)
-![Test 7](screenshots/test-7.png)
 
 ### Tutorial
 
